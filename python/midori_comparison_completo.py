@@ -18,7 +18,7 @@ import os
 # =============================================================================
 # 1. Cargar lista de especies ausentes en eDNA (exclusivas de morfología)
 # =============================================================================
-# Este CSV lo genera comparison_v2.R (bloque "Exportar especies exclusivas de
+# Este CSV lo genera wilcoxon_comparison.R (bloque "Exportar especies exclusivas de
 # morfología para midori_comparison.py"). Regenéralo desde R antes de correr
 # este script si has cambiado algo en el pipeline de R.
 os.chdir('/mnt/c/Users/andre/Desktop/TFM_AZTI/comparison/archivos/download_from_r')

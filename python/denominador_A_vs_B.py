@@ -4,7 +4,7 @@
 ANALISIS APARTE: denominador A vs B  (script independiente)
 =============================================================================
 Compara dos formas de normalizar a abundancia relativa, usando EXACTAMENTE el
-mismo pipeline que comparison_v2.R (misma limpieza, mismo Wilcoxon pareado,
+mismo pipeline que wilcoxon_comparison.R (misma limpieza, mismo Wilcoxon pareado,
 misma clasificacion por mediana/media), cambiando SOLO el denominador:
 
   A (la que usas ahora) : denominador de morfologia = suma de TODAS sus clases.
@@ -30,7 +30,7 @@ from scipy.stats import wilcoxon
 from statsmodels.stats.multitest import multipletests
 warnings.filterwarnings("ignore")
 
-# --- Rutas (mismas que comparison_v2.R) ---
+# --- Rutas (mismas que wilcoxon_comparison.R) ---
 BASE     = "/mnt/c/Users/andre/Desktop/TFM_AZTI/comparison/archivos"
 RUTA     = os.path.join(BASE, "Abundance_tables_Andrea_Metabridge")
 RUTA_TAX = os.path.join(BASE, "download_from_python")

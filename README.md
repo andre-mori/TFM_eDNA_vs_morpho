@@ -57,7 +57,7 @@ las discrepancias que un índice agregado puede esconder.
 
 ```mermaid
 flowchart LR
-    A["Tablas MetaBridge<br/>eDNA COI + morfología"] --> B["comparison_v2.R<br/>curación · normalización<br/>Wilcoxon pareado"]
+    A["Tablas MetaBridge<br/>eDNA COI + morfología"] --> B["wilcoxon_comparison.R<br/>curación · normalización<br/>Wilcoxon pareado"]
     A --> C["worms_tax_builder.py<br/>taxonomía WoRMS"]
     C --> B
     B --> D["midori_comparison.py<br/>¿hay referencia COI?"]
@@ -65,7 +65,7 @@ flowchart LR
     D --> F["resultados/tablas"]
     E --> F
     B --> F
-    F --> G["R/graficos<br/>figuras finales"]
+    F --> G["R/graphics<br/>figuras finales"]
 ```
 
 El procesamiento bioinformático previo —demultiplexado con `cutadapt`, *denoising* con `DADA2`,
@@ -77,14 +77,13 @@ de abundancia ya procesadas.**
 
 ```
 ├── R/
-│   ├── comparison_v2.R                 Curación de nombres, normalización a abundancia
-│   │                                   relativa (denominador a nivel de clase) y test de
-│   │                                   Wilcoxon pareado por nivel, con corrección múltiple
-│   │                                   (Benjamini-Hochberg y Bonferroni)
-│   ├── generate_taxonomic_summary_EN.R Tablas resumen por nivel taxonómico
-│   └── graficos/
-│       ├── graficos_resultados_TFM_v3_reestructurado.R
-│       └── grafico_dispersion_niveles_clasificacion.R
+│   ├── wilcoxon_comparison.R      Curación de nombres, normalización a abundancia relativa
+│   │                              (denominador a nivel de clase) y test de Wilcoxon pareado
+│   │                              por nivel, con corrección múltiple (BH y Bonferroni)
+│   ├── appendix_TFM.R             Excel de anexos: una hoja por nivel taxonómico
+│   └── graphics/
+│       ├── graphics_TFM.R         Todas las figuras y tablas de los Resultados
+│       └── scatter_TFM.R          Dispersiones morfología vs. eDNA en los cinco niveles
 │
 ├── python/
 │   ├── worms_tax_builder.py            Rutas taxonómicas completas vía la API REST de WoRMS
@@ -112,11 +111,13 @@ de abundancia ya procesadas.**
 **Orden de ejecución**
 
 ```bash
-Rscript R/comparison_v2.R                  # normalización y contraste estadístico
-python python/worms_tax_builder.py         # taxonomía de los OTUs de eDNA
-python python/midori_comparison.py         # cobertura de la base de datos de referencia
-python python/indicator_comparison.py      # condición de indicador biótico
-Rscript R/graficos/graficos_resultados_TFM_v3_reestructurado.R
+Rscript R/wilcoxon_comparison.R        # normalización y contraste estadístico
+python  python/worms_tax_builder.py    # taxonomía de los OTUs de eDNA
+python  python/midori_comparison.py    # cobertura de la base de datos de referencia
+python  python/indicator_comparison.py # condición de indicador biótico
+Rscript R/graphics/graphics_TFM.R      # figuras y tablas de Resultados
+Rscript R/graphics/scatter_TFM.R       # dispersiones por nivel
+Rscript R/appendix_TFM.R               # Excel de anexos
 ```
 
 ## Disponibilidad de los datos

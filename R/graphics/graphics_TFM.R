@@ -2,8 +2,8 @@
 # RESULTADOS TFM — Andrea Moriñigo  ·  SCRIPT REESTRUCTURADO (v3)
 # Morfología clásica vs. metabarcoding de eDNA (COI) — MetaBridge
 # -----------------------------------------------------------------------------
-# Este script sustituye a graficos_resultados_TFM_v2.R + tablas_resultados_TFM_v2.R
-# y reordena TODAS las figuras y tablas siguiendo la lógica de los Resultados,
+# Genera TODAS las figuras y tablas de los Resultados, ordenadas siguiendo la
+# lógica de la memoria,
 # en tres bloques:
 #
 #   BLOQUE 1 — Panorama general: cuántos taxones se comparten y cuántos no.
@@ -94,7 +94,7 @@ euler_taxa <- function(nivel, titulo, archivo_salida, shape_euler = "ellipse") {
   # Conjuntos a partir de los datos YA PROCESADOS (wilcox), NO de las tablas
   # crudas Class_cox1.csv / Class_Morpho_based.csv. Así el diagrama coincide con
   # el resto del análisis (limpieza, renombrados, fusión Hexacorallia+Octocorallia
-  # y filtrado de clases de comparison_v2.R). Leyendo las tablas crudas salían los
+  # y filtrado de clases de wilcoxon_comparison.R). Leyendo las tablas crudas salían los
   # números viejos (a nivel de clase 20/39/6 en vez de 22/23/2).
   sub        <- wilcox[wilcox$level == nivel, ]
   taxa_both  <- sub$taxon[sub$present_in == "both"]
@@ -797,7 +797,7 @@ cat("\n[4.1] Especies:", nrow(master),
 stopifnot(nrow(master) == 632)   # si el join duplicara filas, aquí saltaría
 
 # CORRECCION: tamanos de muestra dinamicos. Antes los rotulos de titulos, cabeceras
-# y notas al pie llevaban "633" y "78" escritos a mano; si comparison_v2.R cambiaba,
+# y notas al pie llevaban "633" y "78" escritos a mano; si wilcoxon_comparison.R cambiaba,
 # las cifras de las tablas se actualizaban pero los textos seguian diciendo lo viejo.
 N_TOT  <- nrow(master)                 # especies exclusivas de morfologia
 N_1PCT <- sum(master$en_01pct)          # subconjunto mas abundante (>= 0,1 %)

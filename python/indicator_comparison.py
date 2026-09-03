@@ -72,7 +72,7 @@ def norm(x):
 # =============================================================================
 # CARGA A — LAS 632 ESPECIES Y LOS 399 GÉNEROS AUSENTES EN eDNA
 # =============================================================================
-print("\n[A] TAXONES AUSENTES EN eDNA (salida de comparison_v2.R)")
+print("\n[A] TAXONES AUSENTES EN eDNA (salida de wilcoxon_comparison.R)")
 
 def cargar_taxones(fichero, nivel, present_in_val, col_abund):
     # R escribe con write.csv2 -> separador ";" y decimal ","
@@ -93,7 +93,7 @@ gen_aus = cargar_ausentes("gen_morpho_compare.csv", "Genus")
 
 print(f"  -> {len(sp_aus)} especies ausentes | {len(gen_aus)} géneros ausentes")
 if len(sp_aus) != 632:
-    print(f"  AVISO: esperaba 632 especies y hay {len(sp_aus)}. ¿Has re-ejecutado comparison_v2.R?")
+    print(f"  AVISO: esperaba 632 especies y hay {len(sp_aus)}. ¿Has re-ejecutado wilcoxon_comparison.R?")
 if len(gen_aus) != 399:
     print(f"  AVISO: esperaba 399 géneros y hay {len(gen_aus)}. ¿Has añadido el export de géneros?")
 
@@ -106,9 +106,9 @@ gen_edna = cargar_taxones("gen_edna_compare.csv", "Genus",   "only_eDNA", "mean_
 
 print(f"  -> {len(sp_edna)} especies solo eDNA | {len(gen_edna)} géneros solo eDNA")
 if len(sp_edna) != 105:
-    print(f"  AVISO: esperaba 105 especies solo-eDNA y hay {len(sp_edna)}. ¿Has re-ejecutado comparison_v2.R?")
+    print(f"  AVISO: esperaba 105 especies solo-eDNA y hay {len(sp_edna)}. ¿Has re-ejecutado wilcoxon_comparison.R?")
 if len(gen_edna) != 97:
-    print(f"  AVISO: esperaba 97 géneros solo-eDNA y hay {len(gen_edna)}. ¿Has re-ejecutado comparison_v2.R?")
+    print(f"  AVISO: esperaba 97 géneros solo-eDNA y hay {len(gen_edna)}. ¿Has re-ejecutado wilcoxon_comparison.R?")
 
 
 # =============================================================================
