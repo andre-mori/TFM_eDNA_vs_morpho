@@ -1,0 +1,16 @@
+"level";"present_in";"n";"sig_BH";"sig_bon";"total_level";"porcentaje"
+"Class";"both";22;18;13;47;46,8
+"Class";"only_eDNA";23;0;0;47;48,9
+"Class";"only_morphology";2;0;0;47;4,3
+"Order";"both";40;32;22;95;42,1
+"Order";"only_eDNA";30;0;0;95;31,6
+"Order";"only_morphology";25;0;0;95;26,3
+"Family";"both";90;72;57;324;27,8
+"Family";"only_eDNA";77;0;0;324;23,8
+"Family";"only_morphology";157;0;0;324;48,5
+"Genus";"both";118;86;64;614;19,2
+"Genus";"only_eDNA";97;0;0;614;15,8
+"Genus";"only_morphology";399;0;0;614;65
+"Species";"both";88;63;41;825;10,7
+"Species";"only_eDNA";105;0;0;825;12,7
+"Species";"only_morphology";632;0;0;825;76,6

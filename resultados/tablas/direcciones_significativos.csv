@@ -1,0 +1,16 @@
+"level","direction","n","total_sig","pct"
+"Class","conflict",1,13,7.7
+"Class","overestimated_in_eDNA",3,13,23.1
+"Class","underestimated_in_eDNA",9,13,69.2
+"Order","conflict",1,22,4.5
+"Order","overestimated_in_eDNA",3,22,13.6
+"Order","underestimated_in_eDNA",18,22,81.8
+"Family","conflict",7,57,12.3
+"Family","overestimated_in_eDNA",5,57,8.8
+"Family","underestimated_in_eDNA",45,57,78.9
+"Genus","conflict",9,64,14.1
+"Genus","overestimated_in_eDNA",6,64,9.4
+"Genus","underestimated_in_eDNA",49,64,76.6
+"Species","conflict",2,41,4.9
+"Species","overestimated_in_eDNA",7,41,17.1
+"Species","underestimated_in_eDNA",32,41,78

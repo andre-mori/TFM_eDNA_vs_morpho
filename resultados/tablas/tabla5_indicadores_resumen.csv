@@ -1,0 +1,5 @@
+level;direccion;n_taxones;n_indicador;n_no_indic;pct_indicador;n_con_AMBI;n_con_NSI
+Species;only_morphology;632;527;105;83.4;518;291
+Genus;only_morphology;399;242;157;60.7;235;40
+Species;only_eDNA;105;39;66;37.1;38;12
+Genus;only_eDNA;97;29;68;29.9;29;1
