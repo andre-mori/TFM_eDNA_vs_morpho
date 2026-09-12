@@ -1,7 +1,7 @@
 <h1 align="center">Morfotaxonomía vs. metabarcoding de eDNA (COI)</h1>
 
 <p align="center">
-  <em>¿Describen la misma comunidad bentónica dos métodos que clasifican igual el estado ecológico?</em>
+  <em>¿Clasifican igual el estado ecológico ambos métodos?</em>
 </p>
 
 <p align="center">
