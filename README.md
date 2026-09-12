@@ -21,8 +21,8 @@ El trabajo compara la **identificación morfológica clásica** y el **metabarco
 en el contexto del monitoreo regulatorio del impacto de la extracción petrolífera *offshore*.
 Los datos proceden del proyecto **MetaBridge** (NORCE / AZTI, 2018–2022).
 
-La mayoría de los estudios previos comparan el **resultado final** —un índice biótico, la posición
-en un gradiente de impacto—. Aquí la comparación se hace **taxón a taxón**, que es donde aparecen
+La mayoría de los estudios previos comparan el **resultado final** (un índice biótico, la posición
+en un gradiente de impacto, etc). Aquí la comparación se hace **taxón a taxón**, que es donde aparecen
 las discrepancias que un índice agregado puede esconder.
 
 ## Resultados en una línea
